@@ -4,8 +4,19 @@
 ---
 
 ### Download jar
-
 ##### https://github.com/uinnn/MenuLib/releases/tag/1.0
+
+### Maven (must download the jar)
+```maven
+  <dependency>
+    <groupId>com.github.uin</groupId>
+    <artifactId>MenuLib</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/lib/MenuLib.jar</systemPath>
+  </dependency>
+```
+
 
 ---
 
