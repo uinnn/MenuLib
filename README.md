@@ -13,7 +13,7 @@
     <artifactId>MenuLib</artifactId>
     <version>1.0-SNAPSHOT</version>
     <scope>system</scope>
-    <systemPath>${basedir}/lib/MenuLib.jar</systemPath>
+    <systemPath>${basedir}/your/path/to/lib/MenuLib.jar</systemPath>
   </dependency>
 ```
 
