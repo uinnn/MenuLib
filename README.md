@@ -24,12 +24,16 @@
 
 ### Maven (must download the jar)
 ```maven
+  <properties>
+      <MenuLib.path>your-path-to-menulib.jar-location\lib\MenuLib</MenuLib.path>
+  </properties>
+
   <dependency>
-    <groupId>com.github.uin</groupId>
-    <artifactId>MenuLib</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <scope>system</scope>
-    <systemPath>${basedir}/your/path/to/lib/MenuLib.jar</systemPath>
+      <groupId>com.github.uin</groupId>
+      <artifactId>MenuLib</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${MenuLib.path}/MenuLib.jar</systemPath>
   </dependency>
 ```
 
