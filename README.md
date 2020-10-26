@@ -3,6 +3,12 @@
 
 ---
 
+### Download jar
+
+##### https://github.com/uinnn/MenuLib/releases/tag/1.0
+
+---
+
 #### MenuLib is a library created for Spigot 1.8x to facilitate the creation of inventories. <br>
 
 ---
