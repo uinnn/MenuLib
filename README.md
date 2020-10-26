@@ -3,6 +3,24 @@
 
 ---
 
+#### MenuLib is a library created for Spigot 1.8x to facilitate the creation of inventories. <br>
+
+---
+
+##### This library is free to use, without any license, you don't need to leave the credits. <br>
+
+--- 
+
+#### Quick information about the library:
+- Very customizable, you can easily extend the library.
+- Easy handling of items that have functionality.
+- Easy creation of listeners for menu opening and closing events.
+- Properties, acting as a menu metadata.
+
+---
+
+---
+
 ### Download jar
 ##### https://github.com/uinnn/MenuLib/releases/tag/1.0
 
@@ -19,22 +37,6 @@
 
 You must change the path to where the .jar file is, this in the IDE <br>
 Well, you must know how to do this.
-
----
-
-#### MenuLib is a library created for Spigot 1.8x to facilitate the creation of inventories. <br>
-
----
-
-##### This library is free to use, without any license, you don't need to leave the credits. <br>
-
---- 
-
-#### Quick information about the library:
-- Very customizable, you can easily extend the library.
-- Easy handling of items that have functionality.
-- Easy creation of listeners for menu opening and closing events.
-- Properties, acting as a menu metadata.
 
 ---
 
