@@ -17,6 +17,8 @@
   </dependency>
 ```
 
+You must change the path to where the .jar file is, this in the IDE
+Well, you must know how to do this.
 
 ---
 
