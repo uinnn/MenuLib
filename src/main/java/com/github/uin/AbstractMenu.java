@@ -11,9 +11,9 @@ import java.util.*;
 
 public abstract class AbstractMenu implements Provider {
 
-   private static final Map<String, MenuProperty> menuProperties = Maps.newHashMap();
-   private final Map<HandlerType, List<InvokableMethod>> handlers = Maps.newHashMap();
-   private final Map<Integer, UseableItem> itemsMap = Maps.newHashMap();
+   private final Map<String, MenuProperty> menuProperties;
+   private final Map<HandlerType, List<InvokableMethod>> handlers;
+   private final Map<Integer, UseableItem> itemsMap;
    private String title;
    private int size;
    private Player opener;
@@ -25,6 +25,9 @@ public abstract class AbstractMenu implements Provider {
       this.title = title;
       this.size = size;
       this.opened = false;
+      this.menuProperties = Maps.newHashMap();
+      this.handlers = Maps.newHashMap();
+      this.itemsMap = Maps.newHashMap();
    }
 
 
@@ -162,7 +165,7 @@ public abstract class AbstractMenu implements Provider {
 
    @Override
    public void removeItem(int slot) {
-      itemsMap.put(slot, null);
+      itemsMap.remove(slot);
       if (inventory != null)
          inventory.setItem(slot, null);
       if (openerInventory() != null)
@@ -204,10 +207,14 @@ public abstract class AbstractMenu implements Provider {
          if (!method.isAnnotationPresent(MenuHandler.class))
             continue;
          MenuHandler annotation = method.getAnnotation(MenuHandler.class);
-         if (annotation.type() == HandlerType.INITIALIZE) {
-            initializeHandlers.add(new InvokableMethod(method, instance));
+         InvokableMethod invokableMethod = new InvokableMethod(method, instance);
+         if (annotation.type() == HandlerType.ALL) {
+            initializeHandlers.add(invokableMethod);
+            finalizeHandlers.add(invokableMethod);
+         } else if (annotation.type() == HandlerType.INITIALIZE) {
+            initializeHandlers.add(invokableMethod);
          } else if (annotation.type() == HandlerType.FINALIZE) {
-            finalizeHandlers.add(new InvokableMethod(method, instance));
+            finalizeHandlers.add(invokableMethod);
          }
       }
       this.handlers.put(HandlerType.INITIALIZE, initializeHandlers);

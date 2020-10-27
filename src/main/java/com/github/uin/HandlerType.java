@@ -3,6 +3,7 @@ package com.github.uin;
 public enum HandlerType {
 
    INITIALIZE,
-   FINALIZE
+   FINALIZE,
+   ALL
 
 }
